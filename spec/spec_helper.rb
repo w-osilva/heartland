@@ -3,6 +3,7 @@
 require 'debug'
 require 'simplecov'
 require 'simplecov-console'
+require 'factory_bot'
 
 SimpleCov.minimum_coverage 100
 SimpleCov.formatter = SimpleCov::Formatter::Console
@@ -12,7 +13,12 @@ SimpleCov.start
 # load libraries
 Dir[File.join(__dir__, '../lib', '**', '*.rb')].each { |file| require file }
 
+# load factories
+FactoryBot.find_definitions
+
 RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
