@@ -7,5 +7,7 @@ module Challenge
 
   def solution(input)
     photos = input.split("\n").map { |string| PhotoBuilder.call(string) }
+
+    RenamePhotosService.call(photos)
   end
 end
