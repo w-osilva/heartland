@@ -12,6 +12,8 @@ end
 
 group :test do
   gem 'rspec'
+  gem 'simplecov'
+  gem 'simplecov-console'
 end
 
 group :development, :test do

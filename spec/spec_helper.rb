@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
 require 'debug'
+require 'simplecov'
+require 'simplecov-console'
+
+SimpleCov.minimum_coverage 100
+SimpleCov.formatter = SimpleCov::Formatter::Console
+SimpleCov.add_filter ['/spec/']
+SimpleCov.start
 
 # load libraries
 Dir[File.join(__dir__, '../lib', '**', '*.rb')].each { |file| require file }
