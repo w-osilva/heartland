@@ -68,6 +68,12 @@ Assume that:
 
 ---
 
+## Running solution
+
+```bash
+bin/run
+```
+
 ## Running tests
 ```bash
 bundle install
