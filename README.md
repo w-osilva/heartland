@@ -65,3 +65,16 @@ Assume that:
 * No two photos from the same location share the same date and time;
 * Each extension is "jpg", "png" or "jpeg". In your solution, focus on correctness.
   Collapse
+
+---
+
+## Running tests
+```bash
+bundle install
+bundle exec rspec
+```
+
+## Running linter
+```bash
+bundle exec rubocop
+```

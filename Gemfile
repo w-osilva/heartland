@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 ruby '3.1.2'
 
 group :development do
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rspec'
 end
 
 group :test do

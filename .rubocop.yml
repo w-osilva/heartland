@@ -1,0 +1,38 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1.2
+
+Layout/LineLength:
+  Enabled: true
+  Max: 120
+  Exclude:
+    - 'Gemfile'
+
+Metrics/MethodLength:
+  CountAsOne: ['array', 'hash']
+Metrics/BlockLength:
+  CountAsOne: ['array', 'hash']
+  Exclude:
+    - 'spec/**/*'
+
+Style/Documentation:
+  Enabled: false
+Style/HashSyntax:
+  Enabled: false
+Style/IfUnlessModifier:
+  Severity: warning
+
+RSpec/ExampleLength:
+  Enabled: false
+RSpec/Focus:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
+RSpec/FilePath:
+  Enabled: false
+RSpec/VerifiedDoubles:
+  Enabled: false
