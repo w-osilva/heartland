@@ -6,8 +6,6 @@ updates:
     schedule:
       interval: daily
     open-pull-requests-limit: 6
-    registries:
-      - rubygems-server-rubygems-pkg-github-com-contratadome
 
   - package-ecosystem: github-actions
     directory: "/"
